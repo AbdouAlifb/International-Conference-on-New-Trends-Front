@@ -1,24 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const UpdatePoster = ({ match }) => {
+const UpdatePoster = () => {
   const [posterData, setPosterData] = useState({
     titlePoster: '',
     descriptionPoster: '',
     contentPoster: '',
   });
 
+  const { id } = useParams(); // Get the poster ID from the URL params
+
   useEffect(() => {
-    // Appel à l'API pour récupérer les données du poster à mettre à jour
-    axios.get(`http://localhost:8083/poster/get/${match.params.id}`)
+    // Fetch the poster data from the API using the ID
+    axios.get(`http://localhost:8083/poster/get/${id}`)
       .then(response => {
         setPosterData(response.data);
       })
       .catch(error => {
-        console.error('Erreur lors de la récupération des données du poster :', error);
+        console.error('Error fetching poster data:', error);
       });
-  }, [match.params.id]);
+  }, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,20 +34,20 @@ const UpdatePoster = ({ match }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Appel à l'API pour mettre à jour le poster
-    axios.put(`http://localhost:8083/poster/update/${match.params.id}`, posterData)
+    // Send a PUT request to update the poster data
+    axios.put(`http://localhost:8083/poster/update/${id}`, posterData)
       .then(response => {
-        console.log('Poster mis à jour avec succès :', response.data);
-        // Rediriger vers la liste des posters ou effectuer une autre action après la mise à jour
+        console.log('Poster updated successfully:', response.data);
+        // Redirect to the poster list or perform another action after update
       })
       .catch(error => {
-        console.error('Erreur lors de la mise à jour du poster :', error);
+        console.error('Error updating poster:', error);
       });
   };
 
   return (
     <div className="container mt-4">
-      <h2 className="text-center mb-4">Mettre à jour le Poster</h2>
+      <h2 className="text-center mb-4">Modifier le Poster</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="titlePoster" className="form-label">Titre</label>

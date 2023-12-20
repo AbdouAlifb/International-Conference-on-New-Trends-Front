@@ -29,7 +29,7 @@ function App() {
           <Route path="/posters" element={<Posters />} />
           <Route path="/addposters" element={<AddPoster />} />
           <Route path="/listeposters" element={<ListePoster />} />
-          <Route path="/updateposters/:id" component={UpdatePoster} />
+          <Route path="/updateposters/:id" element={<UpdatePoster />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/venue-contact" element={<VenueContact />} />
           <Route path="/news" element={<NewsSection />} />
