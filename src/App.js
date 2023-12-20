@@ -12,6 +12,9 @@ import Program from './components/Program';
 
 import Gallery from './components/Gallery';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AddPoster from './components/poster/AddPoster';
+import UpdatePoster from './components/poster/UpdatePoster';
+import ListePoster from './components/poster/ListePoster';
 
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
           <Route path="/program" element={<Program/>} />
           <Route path="/keynotes" element={<Keynotes />} />
           <Route path="/posters" element={<Posters />} />
+          <Route path="/addposters" element={<AddPoster />} />
+          <Route path="/listeposters" element={<ListePoster />} />
+          <Route path="/updateposters/:id" component={UpdatePoster} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/venue-contact" element={<VenueContact />} />
           <Route path="/news" element={<NewsSection />} />
