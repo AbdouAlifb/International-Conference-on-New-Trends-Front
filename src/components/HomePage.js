@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import NavigationBar from './Navbar';
+
 import NewsSection from './NewsSection';
-import Footer from './Footer';
+
 
 const HomePage = () => {
     const [conferenceInfo, setConferenceInfo] = useState({ title: '', address: '' });

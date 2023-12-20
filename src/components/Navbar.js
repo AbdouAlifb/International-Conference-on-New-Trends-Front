@@ -18,16 +18,16 @@ const NavigationBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                 <Nav>
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#program">Program</Nav.Link>
-                    <Nav.Link href="#keynotes">Keynotes</Nav.Link>
-                    <Nav.Link href="#posters">Posters</Nav.Link>
-                    <Nav.Link href="#registration">Registration</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/program">Program</Nav.Link>
+                    <Nav.Link href="/keynotes">Keynotes</Nav.Link>
+                    <Nav.Link href="/posters">Posters</Nav.Link>
+                    <Nav.Link href="/registration">Registration</Nav.Link>
                     <Nav.Link href="#committees">Committes</Nav.Link>
                     <Nav.Link href="#papers">Call of papers</Nav.Link>
-                    <Nav.Link href="#news">News</Nav.Link>
-                    <Nav.Link href="#venue">Venue & Contact</Nav.Link>
-                    <Nav.Link href="#gallery">Gallery</Nav.Link>
+                    <Nav.Link href="/news">News</Nav.Link>
+                    <Nav.Link href="/venue">Venue & Contact</Nav.Link>
+                    <Nav.Link href="/gallery">Gallery</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>
