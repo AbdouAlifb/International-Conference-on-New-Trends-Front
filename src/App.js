@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AddPoster from './components/poster/AddPoster';
 import UpdatePoster from './components/poster/UpdatePoster';
 import ListePoster from './components/poster/ListePoster';
+import ImageList from './components/image/ImageList ';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/posters" element={<Posters />} />
           <Route path="/addposters" element={<AddPoster />} />
           <Route path="/listeposters" element={<ListePoster />} />
+          <Route path="/listegallery" element={<ImageList />} />
           <Route path="/updateposters/:id" element={<UpdatePoster />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/venue-contact" element={<VenueContact />} />

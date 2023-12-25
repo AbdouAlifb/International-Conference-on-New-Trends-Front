@@ -20,7 +20,7 @@ const Listeposter = () => {
 
   const handleDelete = (id) => {
     // Handle poster deletion logic
-    axios.delete(`http://localhost:8083/poster/delete/${id}`)
+    axios.delete(`http://localhost:8081/poster/delete/${id}`)
       .then(response => {
         console.log(`Poster with ID ${id} deleted successfully`);
         // Update the list of posters after deletion

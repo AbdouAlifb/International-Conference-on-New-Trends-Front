@@ -7,7 +7,7 @@ const Posters = () => {
 
   useEffect(() => {
     // Appel à l'API pour récupérer la liste des posters
-    axios.get('http://localhost:8083/poster/all')
+    axios.get('http://localhost:8081/poster/all')
       .then(response => {
         setPosters(response.data);
       })
@@ -17,7 +17,7 @@ const Posters = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ background: 'black', color: 'white' }}>
       <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
                 <img src={`${process.env.PUBLIC_URL}/marrakech.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
@@ -31,12 +31,12 @@ const Posters = () => {
             </div>
     <div className="container mt-4">
         
-      <h2 className="text-center mb-4 text-primary">DSAI 2023: 1st International Conference on Data Science & Artificial Intelligence
+      <h2 className="text-center  bg bg-warning mb-4 ">DSAI 2023: 1st International Conference on Data Science & Artificial Intelligence
 <br/>POSTERS</h2>
       <ul className="list-group">
         {posters.map(poster => (
-          <li key={poster.id} className="list-group-item">
-            <h3 className="text-info">{poster.titlePoster}</h3>
+          <li key={poster.id}>
+            <h3 className="text-info" style={{color:"green"}}>{poster.titlePoster}</h3>
             <p>{poster.descriptionPoster}</p>
             <p>{poster.contentPoster}</p>
           </li>

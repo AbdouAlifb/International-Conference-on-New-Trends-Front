@@ -14,7 +14,7 @@ const UpdatePoster = () => {
 
   useEffect(() => {
     // Fetch the poster data from the API using the ID
-    axios.get(`http://localhost:8083/poster/get/${id}`)
+    axios.get(`http://localhost:8081/poster/get/${id}`)
       .then(response => {
         setPosterData(response.data);
       })
@@ -35,7 +35,7 @@ const UpdatePoster = () => {
     e.preventDefault();
 
     // Send a PUT request to update the poster data
-    axios.put(`http://localhost:8083/poster/update/${id}`, posterData)
+    axios.put(`http://localhost:8081/poster/update/${id}`, posterData)
       .then(response => {
         console.log('Poster updated successfully:', response.data);
         // Redirect to the poster list or perform another action after update

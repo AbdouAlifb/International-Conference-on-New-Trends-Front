@@ -23,8 +23,8 @@ const NavigationBar = () => {
                     <Nav.Link href="/keynotes">Keynotes</Nav.Link>
                     <Nav.Link href="/posters">Posters</Nav.Link>
                     <Nav.Link href="/registration">Registration</Nav.Link>
-                    <Nav.Link href="#committees">Committes</Nav.Link>
-                    <Nav.Link href="#papers">Call of papers</Nav.Link>
+                    <Nav.Link href="/committees">Committes</Nav.Link>
+                    <Nav.Link href="/papers">Call of papers</Nav.Link>
                     <Nav.Link href="/news">News</Nav.Link>
                     <Nav.Link href="/venue">Venue & Contact</Nav.Link>
                     <Nav.Link href="/gallery">Gallery</Nav.Link>

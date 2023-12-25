@@ -21,7 +21,7 @@ const AddPoster = () => {
     e.preventDefault();
 
     // Appel à l'API pour sauvegarder le poster
-    axios.post('http://localhost:8083/poster/save', posterData)
+    axios.post('http://localhost:8081/poster/save', posterData)
       .then(response => {
         console.log('Poster ajouté avec succès :', response.data);
         // Réinitialiser le formulaire après l'ajout
