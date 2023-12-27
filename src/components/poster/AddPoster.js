@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 6a2f86f2daa24515f4f0eed6c3bd35841d8dfd54
+
+
 const AddPoster = () => {
   const [posterData, setPosterData] = useState({
     titlePoster: '',
@@ -41,14 +40,12 @@ const AddPoster = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="container mt-4">
-=======
+
     
     <div className="container mt-4">
            
 
->>>>>>> 6a2f86f2daa24515f4f0eed6c3bd35841d8dfd54
+
       <h2 className="text-center mb-4">Ajouter un Poster</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">

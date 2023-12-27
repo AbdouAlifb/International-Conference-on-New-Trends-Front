@@ -51,6 +51,20 @@ const Sidebar = () => {
                         </Accordion.Body>
                     </Accordion.Item>
 
+
+                    <Accordion.Item eventKey="3">
+                        <Accordion.Header onClick={() => toggleSection('Program')}>Program</Accordion.Header>
+                        <Accordion.Body className={openSection === 'Program' ? 'show' : ''}>
+                            <Nav className="flex-column sub-menu">
+                                <LinkContainer to="/Program/CreateProgram"><Nav.Link>Create Program</Nav.Link></LinkContainer>
+                                {/* <LinkContainer to="/updateconferenceinfo"><Nav.Link>Update Info</Nav.Link></LinkContainer> */}
+                                <LinkContainer to="/Program/ProgramList"><Nav.Link>List Program</Nav.Link></LinkContainer>
+                              
+                            </Nav>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+
                     {/* Add other sections if needed */}
                     {/* ... */}
                 </Accordion>
