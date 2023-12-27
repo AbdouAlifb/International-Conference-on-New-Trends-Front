@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Sidebar from '../Sidebar';
 
 const UpdatePoster = () => {
   const [posterData, setPosterData] = useState({
@@ -46,6 +47,8 @@ const UpdatePoster = () => {
   };
 
   return (
+    <div  className="d-flex">
+    <Sidebar />
     <div className="container mt-4">
       <h2 className="text-center mb-4">Modifier le Poster</h2>
       <form onSubmit={handleSubmit}>
@@ -85,6 +88,7 @@ const UpdatePoster = () => {
         </div>
         <button type="submit" className="btn btn-primary">Mettre à jour</button>
       </form>
+    </div>
     </div>
   );
 };

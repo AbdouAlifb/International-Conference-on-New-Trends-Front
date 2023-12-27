@@ -16,16 +16,13 @@ import AddPoster from './components/poster/AddPoster';
 import UpdatePoster from './components/poster/UpdatePoster';
 import ListePoster from './components/poster/ListePoster';
 import ImageList from './components/image/ImageList ';
-<<<<<<< HEAD
 
-=======
 import AdminDashboard from './components/AdminDashboard';
 
 // confrence info crud system
 import AddConferenceInfo from './components/ConfrenceInfo/AddConferenceInfo';
 import UpdateConferenceInfo from './components/ConfrenceInfo/UpdateConferenceInfo';
 import ViewConferenceInfo from './components/ConfrenceInfo/ViewConferenceInfo';
->>>>>>> 6a2f86f2daa24515f4f0eed6c3bd35841d8dfd54
 
 function App() {
   return (
@@ -33,7 +30,6 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          
           <Route path="/" element={<HomePage />} />
           <Route path="/program" element={<Program/>} />
           <Route path="/keynotes" element={<Keynotes />} />
@@ -46,15 +42,11 @@ function App() {
           <Route path="/venue-contact" element={<VenueContact />} />
           <Route path="/news" element={<NewsSection />} />
           <Route path="/gallery" element={<Gallery />} />
-<<<<<<< HEAD
-=======
           <Route path="/admin" element={<AdminDashboard />} />
-{/* confrence info crud system route */}
           <Route path="/addconferenceinfo" element={<AddConferenceInfo />} />
     <Route path="/updateconferenceinfo/:id" element={<UpdateConferenceInfo />} />
     <Route path="/viewconferenceinfo" element={<ViewConferenceInfo />} />
->>>>>>> 6a2f86f2daa24515f4f0eed6c3bd35841d8dfd54
-          {/* Define other routes as needed */}
+
         </Routes>
         <Footer />
       </div>

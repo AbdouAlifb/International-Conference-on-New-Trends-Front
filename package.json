@@ -9,14 +9,9 @@
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
     "react": "^18.2.0",
-<<<<<<< HEAD
-    "react-bootstrap": "^2.9.1",
-    "react-dom": "^18.2.0",
-=======
     "react-bootstrap": "^2.9.2",
     "react-dom": "^18.2.0",
     "react-router-bootstrap": "^0.26.2",
->>>>>>> 6a2f86f2daa24515f4f0eed6c3bd35841d8dfd54
     "react-router-dom": "^6.21.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

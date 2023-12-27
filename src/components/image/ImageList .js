@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, Button } from 'react-bootstrap';
+import Sidebar from '../Sidebar';
 
 const ImageList = () => {
   const [images, setImages] = useState([]);
@@ -104,6 +105,8 @@ const ImageList = () => {
   };
 
   return (
+    <div  className="d-flex">
+    <Sidebar />
     <div className="container">
       <h2 className="mt-4 mb-4">Image List</h2>
 
@@ -165,6 +168,7 @@ const ImageList = () => {
           </Button>
         </Modal.Footer>
       </Modal>
+    </div>
     </div>
   );
 };

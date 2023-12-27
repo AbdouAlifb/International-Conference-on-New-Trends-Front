@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Sidebar from '../Sidebar';
 
 const Listeposter = () => {
   const [posters, setPosters] = useState([]);
@@ -9,7 +10,7 @@ const Listeposter = () => {
 
   useEffect(() => {
     // Fetch the list of posters from the API
-    axios.get('http://localhost:8083/poster/all')
+    axios.get('http://localhost:8081/poster/all')
       .then(response => {
         setPosters(response.data);
       })
@@ -42,6 +43,8 @@ const Listeposter = () => {
   };
 
   return (
+    <div  className="d-flex">
+    <Sidebar />
     <div className="container mt-4">
       <h2 className="text-center mb-4">Liste des Posters (Admin)</h2>
       <table className="table">
@@ -86,6 +89,8 @@ const Listeposter = () => {
         </button>
       </div>
     </div>
+    </div>
+
   );
 };
 
