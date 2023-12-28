@@ -67,7 +67,7 @@ const Sidebar = () => {
 
                     {/* Add other sections if needed */}
                     {/* ... */}
-                    <Accordion.Item eventKey="2">
+                    <Accordion.Item eventKey="4">
                         <Accordion.Header onClick={() => toggleSection('')}>Gallery</Accordion.Header>
                         <Accordion.Body className={openSection === 'conferenceInfo' ? 'show' : ''}>
                             <Nav className="flex-column sub-menu">
@@ -76,6 +76,25 @@ const Sidebar = () => {
                             </Nav>
                         </Accordion.Body>
                     </Accordion.Item>
+
+
+
+
+
+
+                    <Accordion.Item eventKey="5">
+                        <Accordion.Header onClick={() => toggleSection('')}>Keynotes</Accordion.Header>
+                        <Accordion.Body className={openSection === 'Keynotes' ? 'show' : ''}>
+                            <Nav className="flex-column sub-menu">
+                            <LinkContainer to="/addKeynote"><Nav.Link>Create Keynote</Nav.Link></LinkContainer>
+                                <LinkContainer to="/keynoteList"><Nav.Link>Keynotes</Nav.Link></LinkContainer>
+                                {/* <LinkContainer to="/updateconferenceinfo"><Nav.Link>Update Info</Nav.Link></LinkContainer> */}
+                            </Nav>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+
+
                 </Accordion>
             </Nav>
         </div>

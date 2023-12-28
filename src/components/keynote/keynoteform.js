@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Sidebar from '../Sidebar'; 
 
 const KeynoteForm = ({ onKeynoteAdded }) => {
   const [title, setTitle] = useState('');
@@ -59,6 +60,8 @@ const KeynoteForm = ({ onKeynoteAdded }) => {
   };
 
   return (
+    <div className="d-flex">
+    <Sidebar />
     <div className="container">
       <h2 className="mt-4 mb-4">Keynote Form</h2>
 
@@ -86,6 +89,7 @@ const KeynoteForm = ({ onKeynoteAdded }) => {
       <button className="btn btn-primary" onClick={handleKeynoteUpload}>
         Add Keynote
       </button>
+    </div>
     </div>
   );
 };

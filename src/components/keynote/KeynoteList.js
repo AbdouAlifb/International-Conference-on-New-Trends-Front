@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+import Sidebar from '../Sidebar'; 
 
 const KeynoteList = () => {
   const [keynotes, setKeynotes] = useState([]);
@@ -46,6 +47,9 @@ const KeynoteList = () => {
   };
 
   return (
+
+    <div className="d-flex">
+    <Sidebar />
     <div className="container mt-4">
       <h2 className="text-center mb-4">Liste des Keynotes</h2>
       <table className="table">
@@ -91,6 +95,8 @@ const KeynoteList = () => {
         </tbody>
       </table>
     </div>
+    </div>
+    
   );
 };
 
