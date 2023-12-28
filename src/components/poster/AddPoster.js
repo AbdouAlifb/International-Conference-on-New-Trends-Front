@@ -3,7 +3,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
+import Sidebar from '../Sidebar';
 
 const AddPoster = () => {
   const [posterData, setPosterData] = useState({
@@ -41,9 +41,10 @@ const AddPoster = () => {
 
   return (
 
-    
+<div  className="d-flex">
+    <Sidebar />
     <div className="container mt-4">
-           
+         
 
 
       <h2 className="text-center mb-4">Ajouter un Poster</h2>
@@ -84,6 +85,7 @@ const AddPoster = () => {
         </div>
         <button type="submit" className="btn btn-primary">Ajouter</button>
       </form>
+    </div>
     </div>
   );
 };

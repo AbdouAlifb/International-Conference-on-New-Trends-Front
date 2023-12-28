@@ -42,7 +42,7 @@ const KeynoteList = () => {
 
   const handleUpdateKeynote = (id) => {
     // Navigate to the "UpdateKeynoteForm" page when clicking "Update" button
-    navigate(`/update/${id}`);
+    navigate(`/updateKeynote/${id}`);
   };
 
   return (

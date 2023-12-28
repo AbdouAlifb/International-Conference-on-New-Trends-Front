@@ -16,16 +16,10 @@ import AddPoster from './components/poster/AddPoster';
 import UpdatePoster from './components/poster/UpdatePoster';
 import ProgramList from './components/program/ProgramList';
 import ListePoster from './components/poster/ListePoster';
-
 import ImageList from './components/image/ImageList ';
-
 import CreateProgram from './components/program/CreateProgram';
 import UpdateProgram from './components/program/UpdateProgram';
-
-
-
 import AdminDashboard from './components/AdminDashboard';
-
 // confrence info crud system
 import AddConferenceInfo from './components/ConfrenceInfo/AddConferenceInfo';
 import UpdateConferenceInfo from './components/ConfrenceInfo/UpdateConferenceInfo';
@@ -39,7 +33,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/program" element={<Program/>} />
+          <Route path="/program" element={<Program />} />
           <Route path="/keynotes" element={<Keynotes />} />
           <Route path="/posters" element={<Posters />} />
           <Route path="/addposters" element={<AddPoster />} />
@@ -50,18 +44,20 @@ function App() {
           <Route path="/venue-contact" element={<VenueContact />} />
           <Route path="/news" element={<NewsSection />} />
           <Route path="/gallery" element={<Gallery />} />
-
           <Route path="/admin" element={<AdminDashboard />} />
-
           <Route path="/addconferenceinfo" element={<AddConferenceInfo />} />
-           <Route path="/updateconferenceinfo/:id" element={<UpdateConferenceInfo />} />
-           <Route path="/viewconferenceinfo" element={<ViewConferenceInfo />} />
+          <Route path="/updateconferenceinfo/:id" element={<UpdateConferenceInfo />} />
+          <Route path="/viewconferenceinfo" element={<ViewConferenceInfo />} />
 
-          <Route path="/Program/ProgramList" element={<ProgramList />} />
-          <Route path="/Program/CreateProgram" element={<CreateProgram/>}/>
+
+         <Route path="/Program/CreateProgram" element={<CreateProgram />} />
           <Route path="/UpdateProgram/:id" element={<UpdateProgram />} />
+          <Route path="/Program/ProgramList" element={<ProgramList />} />
 
           {/* Define other routes as needed */}
+
+
+
         </Routes>
         <Footer />
       </div>
