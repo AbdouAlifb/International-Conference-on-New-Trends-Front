@@ -21,7 +21,7 @@ const Sidebar = () => {
     };
 
     return (
-        <div className="sidebar-container">
+        <div className="sidebar-container" >
             <Nav className="flex-column sidebar-nav">
                 <Nav.Link href="/admin" className={isActive('/admin') ? 'active' : ''}>Dashboard Home</Nav.Link>
 
@@ -72,6 +72,15 @@ const Sidebar = () => {
                         <Accordion.Body className={openSection === 'conferenceInfo' ? 'show' : ''}>
                             <Nav className="flex-column sub-menu">
                                 <LinkContainer to="/listegallery"><Nav.Link>gallery</Nav.Link></LinkContainer>
+                                {/* <LinkContainer to="/updateconferenceinfo"><Nav.Link>Update Info</Nav.Link></LinkContainer> */}
+                            </Nav>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="6">
+                        <Accordion.Header onClick={() => toggleSection('')}>registration</Accordion.Header>
+                        <Accordion.Body className={openSection === 'conferenceInfo' ? 'show' : ''}>
+                            <Nav className="flex-column sub-menu">
+                                <LinkContainer to="/registrationform"><Nav.Link>registration list </Nav.Link></LinkContainer>
                                 {/* <LinkContainer to="/updateconferenceinfo"><Nav.Link>Update Info</Nav.Link></LinkContainer> */}
                             </Nav>
                         </Accordion.Body>

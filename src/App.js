@@ -28,6 +28,7 @@ import KeynoteForm from './components/keynote/keynoteform';
 import KeynoteUpdateForm from './components/keynote/KeynoteUpdateForm';
 import KeynoteList from './components/keynote/KeynoteList';
 import LoginAdmin from './components/admin/LoginAdmin';
+import RegistrationForm from './components/Registration/RegistrationForm';
 
 
 
@@ -56,6 +57,7 @@ function App() {
 
 
           <Route path="/addKeynote" element={<KeynoteForm />} />
+          <Route path="/registrationform" element={<RegistrationForm />} />
           <Route path="/updateKeynote/:id" element={<KeynoteUpdateForm />} />
           <Route path="/keynoteList" element={<KeynoteList />} />
         
