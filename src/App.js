@@ -27,6 +27,8 @@ import ViewConferenceInfo from './components/ConfrenceInfo/ViewConferenceInfo';
 import KeynoteForm from './components/keynote/keynoteform';
 import KeynoteUpdateForm from './components/keynote/KeynoteUpdateForm';
 import KeynoteList from './components/keynote/KeynoteList';
+import LoginAdmin from './components/admin/LoginAdmin';
+
 
 
 function App() {
@@ -52,6 +54,7 @@ function App() {
           <Route path="/updateconferenceinfo/:id" element={<UpdateConferenceInfo />} />
           <Route path="/viewconferenceinfo" element={<ViewConferenceInfo />} />
 
+
           <Route path="/addKeynote" element={<KeynoteForm />} />
           <Route path="/updateKeynote/:id" element={<KeynoteUpdateForm />} />
           <Route path="/keynoteList" element={<KeynoteList />} />
@@ -64,6 +67,9 @@ function App() {
           <Route path="/Program/ProgramList" element={<ProgramList />} />
 
           {/* Define other routes as needed */}
+
+
+          <Route path="/login"  element={<LoginAdmin />} />
 
 
 
