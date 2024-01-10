@@ -1,0 +1,323 @@
+/* crudStyles.css */
+.sidebar-container {
+    width: 280px;
+    border-right: 1px solid #ddd;
+}
+
+.content-container {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+/* crudStyles.css */
+
+/* Style the outer container */
+/* .d-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  } */
+  
+  /* Style the Sidebar */
+  /* You can add specific styles for your Sidebar component here */
+  
+  /* Style the content container */
+  .content-container {
+    flex: 1;
+    background-color: #f0f0f0; /* Change this to your desired background color */
+    padding: 20px;
+  }
+  
+  /* Style the success message */
+  .success-message {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Style the form container */
+  .form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the form elements */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  select,
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff; /* Change this to your desired button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Change this to the hover color */
+  }
+  /* crudStyles.css */
+
+/* Style the table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+/* Style table headers */
+.styled-table th {
+  background-color: #007bff; /* Header background color */
+  color: white;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Style table rows */
+.styled-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Alternate row background color */
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row color */
+}
+
+/* Style action buttons */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style filter container */
+.filter-container {
+  margin-bottom: 20px;
+}
+
+/* Style filter label */
+.filter-container label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Style filter select */
+#filter-select {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.form-container {
+  background-color: #fff; /* Background color for the form */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the form */
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.success-message,
+.error-message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.success-message {
+  background-color: #28a745; /* Green for success message */
+  color: #fff;
+}
+
+.error-message {
+  background-color: #dc3545; /* Red for error message */
+  color: #fff;
+}
+
+/* Add a wrapper class for the entire layout */
+.layout-wrapper {
+  display: flex;
+}
+
+/* Adjust the sidebar styles */
+.sidebar-container {
+  width: 280px;
+  /* other styles */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.sidebar-container.closed {
+  transform: translateX(-100%); /* Hide sidebar */
+}
+
+/* Adjust the content container */
+.content-container {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out; /* Smooth transition for margin */
+}
+
+/* When sidebar is open, push content to the right */
+.layout-wrapper.sidebar-open .content-container {
+  margin-left: 280px; /* same as the sidebar width */
+}
+@import url('font-awesome/css/font-awesome.css');
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+/* Add this CSS to style the action buttons */
+.action-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Optional: Add margin between the buttons */
+.action-buttons .btn {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
