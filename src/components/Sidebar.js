@@ -90,7 +90,7 @@ const Sidebar = () => {
                         </Accordion.Body>
                     </Accordion.Item>
 
-<<<<<<< Updated upstream
+
                     {/* Committees Section */}
                     <Accordion.Item eventKey="6">
                         <Accordion.Header onClick={() => toggleSection('content')}>Committees & Call for Papers</Accordion.Header>
@@ -101,8 +101,8 @@ const Sidebar = () => {
                             </Nav>
                         </Accordion.Body>
                     </Accordion.Item>
-=======
-                    <Accordion.Item eventKey="6">
+
+                    <Accordion.Item eventKey="7">
                         <Accordion.Header onClick={() => toggleSection('')}>Contact</Accordion.Header>
                         <Accordion.Body className={openSection === 'Contact' ? 'show' : ''}>
                             <Nav className="flex-column sub-menu">
@@ -114,7 +114,6 @@ const Sidebar = () => {
                     </Accordion.Item>
 
 
->>>>>>> Stashed changes
                 </Accordion>
             </Nav>
         </div>

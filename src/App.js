@@ -20,12 +20,11 @@ import ImageList from './components/image/ImageList ';
 import CreateProgram from './components/program/CreateProgram';
 import UpdateProgram from './components/program/UpdateProgram';
 import AdminDashboard from './components/AdminDashboard';
-<<<<<<< HEAD
+
 import Committees from './components/Committeess'; // Correct casing
 
 import CallForPapers from './components/CallForPapers';
-=======
->>>>>>> 92aab395accc31099fc41f9aad7b3cc276238f29
+
 // confrence info crud system
 import AddConferenceInfo from './components/ConfrenceInfo/AddConferenceInfo';
 import UpdateConferenceInfo from './components/ConfrenceInfo/UpdateConferenceInfo';
@@ -34,28 +33,24 @@ import KeynoteForm from './components/keynote/keynoteform';
 import KeynoteUpdateForm from './components/keynote/KeynoteUpdateForm';
 import KeynoteList from './components/keynote/KeynoteList';
 import LoginAdmin from './components/admin/LoginAdmin';
-<<<<<<< Updated upstream
+
 import RegistrationForm from './components/Registration/RegistrationForm';
 
-<<<<<<< HEAD
+
 import CreateContent from './components/CreateContent'; // Import the new component
 import ViewContent from './components/ViewContent'; // Import the new component
 import UpdateContent from './components/UpdateContent'; 
-=======
-=======
+
 import ContactForm from './components/Contact/ContactForm';
 import UpdateContactForm from './components/Contact/UpdateContactForm';
 import ContactList from './components/Contact/ContactList';
 
->>>>>>> Stashed changes
 
-
->>>>>>> 92aab395accc31099fc41f9aad7b3cc276238f29
 function App() {
   return (
     <Router>
       <div>
-        <Navbar />
+        
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/program" element={<Program />} />
@@ -74,26 +69,21 @@ function App() {
           <Route path="/updateconferenceinfo/:id" element={<UpdateConferenceInfo />} />
           <Route path="/viewconferenceinfo" element={<ViewConferenceInfo />} />
 
-<<<<<<< HEAD
+
           <Route path="/committees" element={<Committees />} />
           <Route path="/papers" element={<CallForPapers />} />
-=======
 
->>>>>>> 92aab395accc31099fc41f9aad7b3cc276238f29
           <Route path="/addKeynote" element={<KeynoteForm />} />
           <Route path="/registrationform" element={<RegistrationForm />} />
           <Route path="/updateKeynote/:id" element={<KeynoteUpdateForm />} />
           <Route path="/keynoteList" element={<KeynoteList />} />
         
-<<<<<<< HEAD
      
 
           <Route path="/add-content" element={<CreateContent />} />
           <Route path="/view-content" element={<ViewContent />} />
           <Route path="/update-content/:id" element={<UpdateContent />} />
-=======
 
->>>>>>> 92aab395accc31099fc41f9aad7b3cc276238f29
 
 
          <Route path="/Program/CreateProgram" element={<CreateProgram />} />

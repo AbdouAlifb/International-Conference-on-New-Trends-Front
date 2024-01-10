@@ -3,7 +3,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-
+import NavigationBar from './Navbar';
 const VenueContact = () => {
   const [images, setImages] = useState([]);
   const [contactInfo, setContactInfo] = useState(null);
@@ -33,11 +33,13 @@ const VenueContact = () => {
   };
   
   return (
+    <div>    <NavigationBar />
     <div style={{ background: 'black', color: 'white', position: 'relative' }}>
-      <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
-        <img src={`${process.env.PUBLIC_URL}/keynoteImage.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
-      </div>
 
+      <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
+        <img src={`${process.env.PUBLIC_URL}/contact.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
+      </div>
+  
       <div style={{ textAlign: 'center', marginTop: '20px' }}>
         <h5>DSAI 2024: 1st International Conference on Data Science & Artificial Intelligence</h5>
         <h2>VENUE & CONTACT</h2> <br />
@@ -102,7 +104,7 @@ const VenueContact = () => {
 
 
 
-
+</div>
     </div>
   );
 };

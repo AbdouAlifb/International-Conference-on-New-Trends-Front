@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import KeynoteDetails from './KeynoteDetails'; // Assurez-vous d'avoir le composant KeynoteDetails créé
+import NavigationBar from './Navbar';
 
 const KeynoteList = () => {
   const [keynotes, setKeynotes] = useState([]);
@@ -25,9 +26,10 @@ const KeynoteList = () => {
   }, []); // Assurez-vous de définir les dépendances correctement
 
   return (
+    <div>    <NavigationBar />
     <div style={{ background: 'black', color: 'white' }}>
         <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
-                <img src={`${process.env.PUBLIC_URL}/keynoteImage.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
+                <img src={`${process.env.PUBLIC_URL}/keynote.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
                 </div>
                   <div style={{textAlign:'center'}}>
         <h5>DSAI 2024: 1st International Conference on Data Science & Artificial Intelligence</h5>
@@ -46,6 +48,7 @@ const KeynoteList = () => {
         <p>Aucune keynote disponible pour le moment.</p>
       )}
     </div>
+   </div>
    </div>
   );
 };
