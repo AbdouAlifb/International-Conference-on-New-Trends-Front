@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import NavigationBar from './Navbar';
+
 const VenueContact = () => {
   const [images, setImages] = useState([]);
   const [contactInfo, setContactInfo] = useState(null);
@@ -33,7 +34,8 @@ const VenueContact = () => {
   };
   
   return (
-    <div>    <NavigationBar />
+    <div>    
+      <NavigationBar />
     <div style={{ background: 'black', color: 'white', position: 'relative' }}>
 
       <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>

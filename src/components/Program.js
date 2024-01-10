@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavigationBar from './Navbar';
+
 
 const groupProgramsByDate = (programs) => {
   const groupedPrograms = {};
@@ -51,6 +53,9 @@ const Program = () => {
   }, []);
 
   return (
+    <div>
+
+            <NavigationBar />
     <div className="container-fluid p-0 m-0" style={{ background: 'black', color: 'white' }}>
       <img
         src="/progran2.jpg"
@@ -94,6 +99,7 @@ const Program = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };
