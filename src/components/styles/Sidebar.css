@@ -55,6 +55,7 @@
     background-color: #17a2b8; /* Different background for active link */
     color: white;
 }
+
 /* Existing styles... */
 
 /* Add these new styles for the toggle button */
@@ -91,4 +92,4 @@
     transform: translateX(-100%);
 }
 
-/* Continue with your existing sidebar styles... */
+

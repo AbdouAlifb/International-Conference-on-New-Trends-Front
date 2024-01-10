@@ -55,6 +55,7 @@
     border-radius: 4px;
     margin-bottom: 20px;
 }
+
 /* crudStyles.css */
 
 /* Style the outer container */
@@ -321,3 +322,4 @@ button[type="submit"]:hover {
 .action-buttons .btn {
   margin-right: 10px; /* Adjust the margin as needed */
 }
+

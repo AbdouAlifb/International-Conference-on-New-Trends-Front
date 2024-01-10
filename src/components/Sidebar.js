@@ -5,7 +5,7 @@ import './styles/Sidebar.css'; // Ensure this import is here
 import { useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
-    const location = useLocation();
+    const location = useLocation(); // Get the current location
     const [openSection, setOpenSection] = useState('');
     const [isOpen, setIsOpen] = useState(false); // State to manage sidebar visibility
 
@@ -26,9 +26,7 @@ const Sidebar = () => {
     };
 
     return (
-        
-        <div className="sidebar-container" >
-            
+        <div className="sidebar-container">
             <Nav className="flex-column sidebar-nav">
                 <Nav.Link href="/admin" className={isActive('/admin') ? 'active' : ''}>Dashboard Home</Nav.Link>
 
@@ -58,7 +56,7 @@ const Sidebar = () => {
                         </Accordion.Body>
                     </Accordion.Item>
 
-
+                    {/* Program Section */}
                     <Accordion.Item eventKey="3">
                         <Accordion.Header onClick={() => toggleSection('Program')}>Program</Accordion.Header>
                         <Accordion.Body className={openSection === 'Program' ? 'show' : ''}>
@@ -66,61 +64,42 @@ const Sidebar = () => {
                                 <LinkContainer to="/Program/CreateProgram"><Nav.Link>Create Program</Nav.Link></LinkContainer>
                                 {/* <LinkContainer to="/updateconferenceinfo"><Nav.Link>Update Info</Nav.Link></LinkContainer> */}
                                 <LinkContainer to="/Program/ProgramList"><Nav.Link>List Program</Nav.Link></LinkContainer>
-                              
                             </Nav>
                         </Accordion.Body>
                     </Accordion.Item>
 
-
-                    {/* Add other sections if needed */}
-                    {/* ... */}
+                    {/* Gallery Section */}
                     <Accordion.Item eventKey="4">
-                        <Accordion.Header onClick={() => toggleSection('')}>Gallery</Accordion.Header>
-                        <Accordion.Body className={openSection === 'conferenceInfo' ? 'show' : ''}>
+                        <Accordion.Header onClick={() => toggleSection('gallery')}>Gallery</Accordion.Header>
+                        <Accordion.Body className={openSection === 'gallery' ? 'show' : ''}>
                             <Nav className="flex-column sub-menu">
-                                <LinkContainer to="/listegallery"><Nav.Link>gallery</Nav.Link></LinkContainer>
-                                {/* <LinkContainer to="/updateconferenceinfo"><Nav.Link>Update Info</Nav.Link></LinkContainer> */}
-                            </Nav>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="6">
-                        <Accordion.Header onClick={() => toggleSection('')}>registration</Accordion.Header>
-                        <Accordion.Body className={openSection === 'conferenceInfo' ? 'show' : ''}>
-                            <Nav className="flex-column sub-menu">
-                                <LinkContainer to="/registrationform"><Nav.Link>registration list </Nav.Link></LinkContainer>
+                                <LinkContainer to="/listegallery"><Nav.Link>Gallery</Nav.Link></LinkContainer>
                                 {/* <LinkContainer to="/updateconferenceinfo"><Nav.Link>Update Info</Nav.Link></LinkContainer> */}
                             </Nav>
                         </Accordion.Body>
                     </Accordion.Item>
 
-
-{/* Committees Section */}
-
-                <Accordion.Item eventKey="7">
-    <Accordion.Header onClick={() => toggleSection('content')}>Committees & Call for Papers</Accordion.Header>
-    <Accordion.Body className={openSection === 'content' ? 'show' : ''}>
-        <Nav className="flex-column sub-menu">
-            <LinkContainer to="/add-content"><Nav.Link>Create Content</Nav.Link></LinkContainer>
-            <LinkContainer to="/view-content"><Nav.Link>View Content</Nav.Link></LinkContainer>
-        </Nav>
-    </Accordion.Body>
-</Accordion.Item>
-
-
-
+                    {/* Registration Section */}
                     <Accordion.Item eventKey="5">
-                        <Accordion.Header onClick={() => toggleSection('')}>Keynotes</Accordion.Header>
-                        <Accordion.Body className={openSection === 'Keynotes' ? 'show' : ''}>
+                        <Accordion.Header onClick={() => toggleSection('registration')}>Registration</Accordion.Header>
+                        <Accordion.Body className={openSection === 'registration' ? 'show' : ''}>
                             <Nav className="flex-column sub-menu">
-                            <LinkContainer to="/addKeynote"><Nav.Link>Create Keynote</Nav.Link></LinkContainer>
-                                <LinkContainer to="/keynoteList"><Nav.Link>Keynotes</Nav.Link></LinkContainer>
+                                <LinkContainer to="/registrationform"><Nav.Link>Registration List</Nav.Link></LinkContainer>
                                 {/* <LinkContainer to="/updateconferenceinfo"><Nav.Link>Update Info</Nav.Link></LinkContainer> */}
                             </Nav>
                         </Accordion.Body>
                     </Accordion.Item>
 
-
-
+                    {/* Committees Section */}
+                    <Accordion.Item eventKey="6">
+                        <Accordion.Header onClick={() => toggleSection('content')}>Committees & Call for Papers</Accordion.Header>
+                        <Accordion.Body className={openSection === 'content' ? 'show' : ''}>
+                            <Nav className="flex-column sub-menu">
+                                <LinkContainer to="/add-content"><Nav.Link>Create Content</Nav.Link></LinkContainer>
+                                <LinkContainer to="/view-content"><Nav.Link>View Content</Nav.Link></LinkContainer>
+                            </Nav>
+                        </Accordion.Body>
+                    </Accordion.Item>
                 </Accordion>
             </Nav>
         </div>
