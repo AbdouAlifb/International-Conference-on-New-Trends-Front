@@ -58,40 +58,46 @@ const KeynoteForm = ({ onKeynoteAdded }) => {
       console.error('Error while saving keynote:', error);
     }
   };
+// ...
 
-  return (
-    <div className="d-flex">
+return (
+  <div className="d-flex">
     <Sidebar />
     <div className="container">
       <h2 className="mt-4 mb-4">Keynote Form</h2>
 
-      <label>Title:
-        <input type="text" className="form-control" value={title} onChange={handleTitleChange} />
-      </label>
-      <br />
-      <label>Description:
-        <input type="text" className="form-control" value={description} onChange={handleDescriptionChange} />
-      </label>
-      <br />
-      <label>Content:
-        <textarea className="form-control" value={content} onChange={handleContentChange} />
-      </label>
-      <br />
-      <br />
-      <label>Bio:
-        <textarea className="form-control" value={bio} onChange={handleBioChange} />
-      </label>
-      <br />
-      <label>File:
-        <input type="file" accept="image/*" className="form-control" onChange={handleFileChange} />
-      </label>
-      <br /><br />
+      <div className="mb-3">
+        <label htmlFor="title" className="form-label">Title:</label>
+        <input type="text" className="form-control" id="title" value={title} onChange={handleTitleChange} />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="description" className="form-label">Description:</label>
+        <input type="text" className="form-control" id="description" value={description} onChange={handleDescriptionChange} />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="content" className="form-label">Content:</label>
+        <textarea className="form-control" id="content" value={content} onChange={handleContentChange} />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="bio" className="form-label">Bio:</label>
+        <textarea className="form-control" id="bio" value={bio} onChange={handleBioChange} />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="file" className="form-label">File:</label>
+        <input type="file" accept="image/*" className="form-control" id="file" onChange={handleFileChange} />
+      </div>
+
       <button className="btn btn-primary" onClick={handleKeynoteUpload}>
         Add Keynote
       </button>
     </div>
-    </div>
-  );
+  </div>
+);
+
 };
 
 export default KeynoteForm;

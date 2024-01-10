@@ -26,7 +26,7 @@ const NavigationBar = () => {
                     <Nav.Link href="/committees">Committes</Nav.Link>
                     <Nav.Link href="/papers">Call of papers</Nav.Link>
                     <Nav.Link href="/news">News</Nav.Link>
-                    <Nav.Link href="/venue">Venue & Contact</Nav.Link>
+                    <Nav.Link href="/venue-contact">Venue & Contact</Nav.Link>
                     <Nav.Link href="/gallery">Gallery</Nav.Link>
                     <Nav.Link href="/login">Login</Nav.Link>
                 </Nav>
