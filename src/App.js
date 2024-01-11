@@ -44,6 +44,7 @@ import UpdateContent from './components/UpdateContent';
 import ContactForm from './components/Contact/ContactForm';
 import UpdateContactForm from './components/Contact/UpdateContactForm';
 import ContactList from './components/Contact/ContactList';
+import Errore from './components/Error_page';
 
 
 function App() {
@@ -84,7 +85,7 @@ function App() {
           <Route path="/view-content" element={<ViewContent />} />
           <Route path="/update-content/:id" element={<UpdateContent />} />
 
-
+              <Route path="*" element={<Errore/>} />
 
          <Route path="/Program/CreateProgram" element={<CreateProgram />} />
           <Route path="/UpdateProgram/:id" element={<UpdateProgram />} />

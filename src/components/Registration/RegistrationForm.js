@@ -96,7 +96,7 @@ const RegistrationForm = () => {
             <th>Title</th>
             <th>Address</th>
             <th>content</th>
-            <th>Description</th>
+    
             <th>Action</th>
           </tr>
         </thead>
@@ -109,7 +109,7 @@ const RegistrationForm = () => {
               <td>{registration.titre}</td>
               <td>{registration.address}</td>
               <td>{registration.country}</td>
-              <td>{registration.description}</td>
+             
               <td>
                 <button
                   type="button"

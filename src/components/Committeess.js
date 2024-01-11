@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import NavigationBar from './Navbar';
 
 
 
@@ -29,6 +30,7 @@ const Committeess = () => {
 
     return (
        <div className="container-fluid p-0 m-0" style={{ background: 'black', color: 'white' }}>
+      <NavigationBar />
             {/* Header Section */}
             <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
                 <img src={`${process.env.PUBLIC_URL}/comm.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />

@@ -9,7 +9,7 @@ const HomePage = () => {
     const [conferenceInfo, setConferenceInfo] = useState({ title: '', address: '' });
 
     useEffect(() => {
-        axios.get('http://localhost:8081/api/conference-info/2') // Replace with your backend URL
+        axios.get('http://localhost:8081/api/conference-info/1') // Replace with your backend URL
             .then(response => {
                 setConferenceInfo(response.data);
             })
