@@ -51,7 +51,7 @@ const KeynoteList = () => {
       <div className="container mt-4">
           <h2 className='mt-4'>Liste des Keynotes</h2><br/>
           <div className="ml-auto">
-            <Link to="/createKeynote" className="btn btn-success">
+            <Link to="/addKeynote" className="btn btn-success">
               <FontAwesomeIcon icon={faPlus} /> 
             </Link>
           </div>

@@ -4,7 +4,7 @@ import NavigationBar from './Navbar';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavigationBar from './Navbar';
+
 
 const Committeess = () => {
     const [committeeData, setCommitteeData] = useState([]);
@@ -35,7 +35,7 @@ const Committeess = () => {
         <NavigationBar />
    
        <div className="container-fluid p-0 m-0" style={{ background: 'black', color: 'white' }}>
-      <NavigationBar />
+    
             {/* Header Section */}
 
             <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
