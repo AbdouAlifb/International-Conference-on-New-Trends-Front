@@ -29,21 +29,25 @@ const CallForPapers = () => {
     }, []);
 
     return (
-       <div>
+        <div>
+<NavigationBar />
+
+        <div className="container-fluid p-0 m-0" style={{ background: 'black', color: 'white' }}>
+
+
 
             {/* Header Section */}
-            <NavigationBar />
             <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
                 <img src={`${process.env.PUBLIC_URL}/call.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
-                <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-                    <h1 style={{ fontSize: '3em', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}>
-                        {conferenceInfo.title}
-                    </h1>
-                    <p style={{ marginTop: '1rem', fontSize: '1.5em' }}>
-                        Address: {conferenceInfo.address}
-                    </p>
-                </div>
+                {/* Text removed from here */}
             </div>
+            {/* Header Text Below Image */}
+            <br></br>
+            <h3 style={{ fontSize: '2em',  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', textAlign: 'center' }}>
+                {conferenceInfo.title}
+            </h3>
+            <hr></hr>
+    
             {/* Committees Table Section */}
             <div style={{ padding: '2rem' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -58,7 +62,9 @@ const CallForPapers = () => {
                 </table>
             </div>
         </div>
+        </div>
     );
+    
 };
 
 export default CallForPapers;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import NavigationBar from '../Navbar';
 
 const LoginAdmin = () => {
   const [email, setEmail] = useState('');
@@ -31,6 +32,9 @@ const LoginAdmin = () => {
   };
 
   return (
+    <div>
+
+    <NavigationBar />
     <div
       className="container-fluid p-0"
       style={{
@@ -77,6 +81,7 @@ const LoginAdmin = () => {
             </div>
           )}
         </form>
+      </div>
       </div>
     </div>
   );
