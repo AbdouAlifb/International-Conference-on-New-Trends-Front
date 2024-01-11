@@ -1,25 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import NavigationBar from './Navbar';
-
+import { Card, Row, Col } from 'react-bootstrap';
+import KeynoteDetails from './KeynoteDetails'; // Assurez-vous d'avoir le composant KeynoteDetails créé
+import './styles/HomeStyle.css';
+import { Link } from 'react-router-dom';
 import NewsSection from './NewsSection';
 
 
 const HomePage = () => {
     const [conferenceInfo, setConferenceInfo] = useState({ title: '', address: '' });
+    const [keynotes, setKeynotes] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8081/api/conference-info/1') // Replace with your backend URL
+        axios.get('http://localhost:8081/api/conference-info/2') // Replace with your backend URL
             .then(response => {
                 setConferenceInfo(response.data);
             })
             .catch(error => {
                 console.error('Error fetching conference info', error);
             });
+
+            
     }, []);
 
+    useEffect(() => {
+        // Récupérez les données de toutes les keynotes depuis votre API (ex. fetch())
+        // Mettez à jour l'état keynotes avec les données reçues
+        const fetchData = async () => {
+          try {
+            const response = await fetch('http://localhost:8081/api/keynotes/all');
+            if (response.ok) {
+              const data = await response.json();
+              setKeynotes(data);
+            } else {
+              console.error('Erreur lors de la récupération des keynotes');
+            }
+          } catch (error) {
+            console.error('Erreur lors de la communication avec le serveur:', error);
+          }
+        };
+    
+        fetchData();
+      }, []); // Assurez-vous de définir les dépendances correctement
+    
     return (
-        <div>
+        <div style={{ background: 'black', color: 'white' }}>
           
            <NavigationBar />
             
@@ -32,6 +58,22 @@ const HomePage = () => {
                     <p style={{ marginTop: '1rem', fontSize: '1.5em' }}>
                         Address: {conferenceInfo.address}
                     </p>
+                    <Link to="/registration">
+                        <button style={{ 
+                            marginBottom: '1rem', 
+                            fontSize: '1em', 
+                            padding: '10px 20px', 
+                            cursor: 'pointer', 
+                            backgroundColor: '#ffc107', // Bootstrap warning color
+                            color: 'white', // Text color
+                            border: 'none', // Remove default border
+                            borderRadius: '5px', // Optional: Rounded corners
+                            textShadow: 'none', // Remove any text shadow
+                        }}>
+                            Register
+                        </button>
+                    </Link>
+
                 </div>
             </div>
             {/* About Section */}
@@ -48,26 +90,50 @@ The main goal of the DS&AI conference series is to contribute to the growth of d
                 </section>
 
                 {/* Keynote Speakers Section */}
-                <section>
-                    <h2>Keynote Speakers</h2>
-                    <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '20px' }}>
-                        {/* Replace with actual images and details of the speakers */}
-                        <img src={`${process.env.PUBLIC_URL}/s1.PNG`} alt="Speaker 1" style={{ width: '15%', height: 'auto' }} />
-                        <img src={`${process.env.PUBLIC_URL}/s2.PNG`} alt="Speaker 2" style={{ width: '15%', height: 'auto' }} />
-                        <img src={`${process.env.PUBLIC_URL}/s3.PNG`} alt="Speaker 3" style={{ width: '15%', height: 'auto' }} />
-                    </div>
-                    <p>Meet our distinguished keynote speakers who are leading experts in the field of data science and AI.</p>
-                </section>
+                <section className="keynote-section">
+    <h2>Keynote Speakers</h2>
+    {keynotes.length > 0 ? (
+        <Row>
+            {keynotes.map((keynote, index) => (
+                <Col md={6} key={index} className="keynote-card">
+                    <Row>
+                        <Col sm={4}>
+                            <img 
+                                src={`data:image/jpeg;base64,${keynote.image}`} 
+                                alt="Keynote Speaker" 
+                                className="keynote-image"
+                            />
+                        </Col>
+                        <Col sm={8} className="keynote-content">
+                            <h3 className="keynote-title">{keynote.title}</h3>
+                            <p>{keynote.description}</p>
+                        </Col>
+                    </Row>
+                </Col>
+            ))}
+        </Row>
+    ) : (
+        <p>No keynote speakers available.</p>
+    )}
+</section>
+
 
                 {/* Program Section */}
                 <section>
-                    <h2>Conference Program</h2>
-                    <img src={`${process.env.PUBLIC_URL}/post.PNG`} alt="Conference Program" style={{ width: '50%', height: 'auto', marginBottom: '20px' }} />
-                    <p>Check out the detailed conference program for information on sessions, talks, and events.</p>
-                </section>
+    <h2 className="text-center">Conference Program</h2>
+    <div className="d-flex justify-content-center">
+        <img 
+            src={`${process.env.PUBLIC_URL}/post.PNG`} 
+            alt="Conference Program" 
+            className="program-image"
+        />
+    </div>
+    <p className="text-center">Check out the detailed conference program for information on sessions, talks, and events.</p>
+</section>
+
 
                 {/* News Section */}
-                <NewsSection />
+                {/* <NewsSection /> */}
             </div>
         </div>
     );

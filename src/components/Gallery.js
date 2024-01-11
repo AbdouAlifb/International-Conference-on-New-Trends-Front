@@ -25,19 +25,19 @@ const ImageList = () => {
     <div  style={{ background: 'black', color: 'white' }}>
          <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
                 <img src={`${process.env.PUBLIC_URL}/marrakech.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
-                <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+                {/* <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
                     <h1 style={{ fontSize: '3em', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}>
                     International Conference
                     </h1>
                     <p style={{ marginTop: '1rem', fontSize: '1.5em' }}>
                         Address : Marrakech
                     </p>
-                </div>
+                </div> */}
             </div>
   
     <div className="container mt-4">
         
-    <h2 className="text-center  bg bg-warning mb-4 ">DSAI 2023: 1st International Conference on Data Science & Artificial Intelligence
+    <h2 className="text-center   ">DSAI 2023: 1st International Conference on Data Science & Artificial Intelligence
 <br/>IMAGE </h2>
 
       <div className="row">

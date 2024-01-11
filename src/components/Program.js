@@ -64,7 +64,7 @@ const Program = () => {
         style={{ objectFit: 'cover', objectPosition: 'center', maxHeight: '80vh' }}
       />
       <div className="container p-4">
-        <h2 className="text-center  bg bg-warning">ICDSAI 2023: 2st International Conference on Data Science & Artificial Intelligence</h2>
+        <h2 className="text-center  ">ICDSAI 2023: 2st International Conference on Data Science & Artificial Intelligence</h2>
         <h1 className="text-center  ">CONFERENCE PROGRAM</h1>
         <div>
           {Object.keys(programs).map((date, index) => (
@@ -72,7 +72,7 @@ const Program = () => {
               <h3>{formatDate(date)}</h3>
               <ul className="list-unstyled">
                 {programs[date].map((program) => (
-                  <li key={program.id} style={{ fontSize: '1.5rem', marginBottom: '20px' }}>
+                  <li key={program.id} style={{ fontSize: '1rem', marginBottom: '20px' }}>
                     <div className="row">
                       <div className="col-md-3">
                         <p className="mb-0">

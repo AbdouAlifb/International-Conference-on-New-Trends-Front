@@ -32,14 +32,14 @@ const KeynoteList = () => {
                 <img src={`${process.env.PUBLIC_URL}/keynote.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
                 </div>
                   <div style={{textAlign:'center'}}>
-        <h5>DSAI 2024: 1st International Conference on Data Science & Artificial Intelligence</h5>
-      <h2>KEYNOTE & INVITED TALK SESSIONS</h2>
-      <p>We are honored to host the following keynote and invited speakers
-        <br/>who will share with us the latest updates in the area of DS&AI.</p>
-        </div>
-        <div className="container mt-4">
-      {keynotes.length > 0 ? (
-        <div>
+              <h5>DSAI 2024: 1st International Conference on Data Science & Artificial Intelligence</h5>
+            <h2>KEYNOTE & INVITED TALK SESSIONS</h2>
+            <p>We are honored to host the following keynote and invited speakers
+              <br/>who will share with us the latest updates in the area of DS&AI.</p>
+              </div>
+              <div className="container mt-4">
+            {keynotes.length > 0 ? (
+              <div>
           {keynotes.map((keynote) => (
             <KeynoteDetails key={keynote.id} keynote={keynote} />
           ))}

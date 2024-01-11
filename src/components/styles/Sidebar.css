@@ -8,6 +8,10 @@
     display: flex;
     flex-direction: column;
 }
+.active-nav-link {
+    color: white; /* Example: white text for active link */
+    text-decoration: underline; /* Example: underline the active link */
+}
 
 .sidebar-title {
     font-size: 1.5rem;
