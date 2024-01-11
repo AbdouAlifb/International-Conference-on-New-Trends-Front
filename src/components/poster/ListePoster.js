@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { faEdit, faTrashAlt, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Sidebar from '../Sidebar';
 
 const Listeposter = () => {
@@ -47,6 +49,15 @@ const Listeposter = () => {
     <Sidebar />
     <div className="container mt-4">
       <h2 className="text-center mb-4">Liste des Posters (Admin)</h2>
+      <div >
+        <button
+          className="btn btn-success"
+          onClick={handleCreatePoster}
+        >
+          Créer Poster
+        </button>
+      </div>
+      <hr/>
       <table className="table">
         <thead>
           <tr>
@@ -62,32 +73,26 @@ const Listeposter = () => {
               <td>{poster.id}</td>
               <td>{poster.titlePoster}</td>
               <td>{poster.descriptionPoster}</td>
+              
               <td>
-                <button
-                  className="btn btn-primary mr-2"
+              <FontAwesomeIcon
+        icon={faEdit}
+        className="btn btn-info mr-2"
                   onClick={() => handleUpdatePoster(poster.id)}
-                >
-                  Modifier
-                </button>
-                <button
-                  className="btn btn-danger"
+                />
+                
+                <FontAwesomeIcon
+        icon={faTrashAlt}
+        className="btn btn-danger"
                   onClick={() => handleDelete(poster.id)}
-                >
-                  Supprimer
-                </button>
+                />
+                
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <div className="text-center">
-        <button
-          className="btn btn-success"
-          onClick={handleCreatePoster}
-        >
-          Créer Poster
-        </button>
-      </div>
+      
     </div>
     </div>
 
