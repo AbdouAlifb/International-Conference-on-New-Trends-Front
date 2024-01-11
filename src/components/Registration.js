@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavigationBar from './Navbar';
+
 
 const Registration= () => {
   const [registrations, setRegistrations] = useState([]);
@@ -52,6 +54,9 @@ const Registration= () => {
   };
 
   return (
+    <div>
+          
+    <NavigationBar />
     <div className="container-fluid p-0 m-0" style={{ background: 'black', color: 'white' }}>
        <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
                 <img src={`${process.env.PUBLIC_URL}/marrakech.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
@@ -136,6 +141,7 @@ const Registration= () => {
           Add Registration
         </button>
       </form>
+    </div>
     </div>
     </div>
   );

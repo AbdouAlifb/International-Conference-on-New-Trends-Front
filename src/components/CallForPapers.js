@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import NavigationBar from './Navbar';
 
 
 
@@ -29,7 +30,9 @@ const CallForPapers = () => {
 
     return (
        <div>
+
             {/* Header Section */}
+            <NavigationBar />
             <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
                 <img src={`${process.env.PUBLIC_URL}/homeimage.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>

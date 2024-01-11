@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NavigationBar from './Navbar';
 
 const ImageList = () => {
   const [images, setImages] = useState([]);
@@ -19,6 +20,8 @@ const ImageList = () => {
   };
 
   return (
+    <div>    
+    <NavigationBar />
     <div  style={{ background: 'black', color: 'white' }}>
          <div style={{ position: 'relative', textAlign: 'right', color: 'white', height: '55vh', overflow: 'hidden' }}>
                 <img src={`${process.env.PUBLIC_URL}/marrakech.jpg`} alt="Marrakech" style={{ width: '100%', height: 'auto' }} />
@@ -51,6 +54,7 @@ const ImageList = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
     </div>
   );
