@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './Navbar';
 
 
-const Registration= () => {
+
+const Registration = () => {
   const [registrations, setRegistrations] = useState([]);
   const [newRegistration, setNewRegistration] = useState({
     name: '',
@@ -55,6 +56,7 @@ const Registration= () => {
 
   return (
     <div>
+
           
     <NavigationBar />
     <div className="container-fluid p-0 m-0" style={{ background: 'black', color: 'white' }}>
@@ -70,78 +72,88 @@ const Registration= () => {
                 </div>
             </div>
 
-    <div className="container mt-4">
-      <h2 className="text-center mb-4">Registration Form</h2>
-      <form>
-        <div className="form-group">
-          <label>Name</label>
-          <input
-            type="text"
-            className="form-control"
-            name="name"
-            value={newRegistration.name}
-            onChange={handleInputChange}
-          />
+
+  
+      <div className="container-fluid p-0 m-0" style={{ background: 'black', color: 'white' }}>
+      
+
+        <div className="container mt-4">
+        <div className="row justify-content-center">
+    <div className="col-md-6">
+          <h2 className="text-center mb-4">Registration Form</h2>
+          <form >
+            <div className="form-group">
+              <label>Name</label>
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                value={newRegistration.name}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                type="text"
+                className="form-control"
+                name="mail"
+                value={newRegistration.mail}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Title</label>
+              <input
+                type="text"
+                className="form-control"
+                name="titre"
+                value={newRegistration.titre}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Address</label>
+              <input
+                type="text"
+                className="form-control"
+                name="address"
+                value={newRegistration.address}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Content</label>
+              <textarea
+                type="text"
+                className="form-control"
+                name="country"
+                value={newRegistration.country}
+                onChange={handleInputChange}
+              />
+              <hr />
+            </div>
+            <div className="form-group">
+              <label>Description</label>
+              <textarea
+                className="form-control"
+                name="description"
+                value={newRegistration.description}
+                onChange={handleInputChange}
+              />
+            </div>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={handleAddRegistration}
+            >
+              Add Registration
+            </button>
+          </form>
+          </div>
+  </div>
         </div>
-        <div className="form-group">
-          <label>Email</label>
-          <input
-            type="text"
-            className="form-control"
-            name="mail"
-            value={newRegistration.mail}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Title</label>
-          <input
-            type="text"
-            className="form-control"
-            name="titre"
-            value={newRegistration.titre}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Address</label>
-          <input
-            type="text"
-            className="form-control"
-            name="address"
-            value={newRegistration.address}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="form-group">
-          <label>Country</label>
-          <input
-            type="text"
-            className="form-control"
-            name="country"
-            value={newRegistration.country}
-            onChange={handleInputChange}
-          />
-          <hr/>
-        </div>
-        <div className="form-group">
-          <label>Description</label>
-          <textarea
-            className="form-control"
-            name="description"
-            value={newRegistration.description}
-            onChange={handleInputChange}
-          />
-        </div>
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={handleAddRegistration}
-        >
-          Add Registration
-        </button>
-      </form>
-    </div>
+      </div>
     </div>
     </div>
   );

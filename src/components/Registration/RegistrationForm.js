@@ -95,7 +95,7 @@ const RegistrationForm = () => {
             <th>Email</th>
             <th>Title</th>
             <th>Address</th>
-            <th>Country</th>
+            <th>content</th>
             <th>Description</th>
             <th>Action</th>
           </tr>
